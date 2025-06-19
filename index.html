@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechTrend Innovations offers cutting-edge AI, cloud, and cybersecurity solutions to empower your business.">
+    <meta name="keywords" content="TechTrend Innovations, AI solutions, cloud computing, cybersecurity, technology services">
+    <meta name="author" content="TechTrend Innovations">
+    <title>TechTrend Innovations | Empowering the Future</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+    <div class="loader-container">
+        <div class="loader-content">
+            <video class="loader-video" autoplay muted loop loading="lazy" aria-hidden="true">
+                <source src="Assets/loader.mp4" type="video/mp4">
+            </video>
+            <div class="loader-cube">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="right"></div>
+                <div class="left"></div>
+                <div class="top"></div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+    </div>
+
+    <main style="opacity: 0; visibility: hidden;">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-rocket"></i>
+                <span>TechTrend Innovations</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+
+        <section class="hero" id="home">
+            <video class="hero-video" autoplay muted loop loading="lazy" aria-hidden="true">
+                <source src="https://videos.pexels.com/video-files/856104/856104-hd_1920_1080_30fps.mp4" type="video/mp4">
+            </video>
+            <canvas class="hero-canvas" aria-hidden="true"></canvas>
+            <lottie-player class="hero-lottie" src="https://assets.lottiefiles.com/packages/lf20_5k8pkazv.json" background="transparent" speed="1" loop autoplay aria-hidden="true"></lottie-player>
+            <div class="hero-content fade-in">
+                <h1>Revolutionizing Technology</h1>
+                <p>Empowering businesses with cutting-edge solutions</p>
+                <div class="cta-buttons">
+                    <button class="cta-button" aria-label="Request a demo">Request Demo</button>
+                    <button class="cta-button secondary" aria-label="Learn more">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="solutions" id="solutions">
+            <div class="container">
+                <h2 class="section-title fade-in">Our Solutions</h2>
+                <p class="section-description fade-in">Discover our innovative technology solutions designed to drive your business forward.</p>
+                <div class="solutions-grid">
+                    <div class="solution-card" data-tilt>
+                        <lottie-player class="solution-lottie" background="transparent" speed="1" aria-hidden="true"></lottie-player>
+                        <div class="solution-content">
+                            <h3>AI-Powered Analytics</h3>
+                            <p>Leverage artificial intelligence to gain actionable insights from your data.</p>
+                            <ul class="solution-features">
+                                <li>Real-time data processing</li>
+                                <li>Predictive analytics</li>
+                                <li>Custom AI models</li>
+                            </ul>
+                            <a href="#" class="solution-link">Explore More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="solution-card" data-tilt>
+                        <lottie-player class="solution-lottie" background="transparent" speed="1" aria-hidden="true"></lottie-player>
+                        <div class="solution-content">
+                            <h3>Cloud Infrastructure</h3>
+                            <p>Scalable and secure cloud solutions to enhance your operations.</p>
+                            <ul class="solution-features">
+                                <li>Hybrid cloud integration</li>
+                                <li>Cost optimization</li>
+                                <li>High availability</li>
+                            </ul>
+                            <a href="#" class="solution-link">Explore More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="solution-card" data-tilt>
+                        <lottie-player class="solution-lottie" background="transparent" speed="1" aria-hidden="true"></lottie-player>
+                        <div class="solution-content">
+                            <h3>Cybersecurity Suite</h3>
+                            <p>Protect your business with our comprehensive security solutions.</p>
+                            <ul class="solution-features">
+                                <li>Threat detection</li>
+                                <li>Encryption services</li>
+                                <li>Compliance support</li>
+                            </ul>
+                            <a href="#" class="solution-link">Explore More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="professional-services" id="services">
+            <div class="container">
+                <h2 class="section-title fade-in">Professional Services</h2>
+                <p class="section-description fade-in">Our expert team delivers tailored services to meet your unique needs.</p>
+                <div class="services-grid">
+                    <div class="service-card" data-tilt>
+                        <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                        <div class="service-content">
+                            <h3>Consulting</h3>
+                            <p>Strategic guidance to align technology with your business goals.</p>
+                            <ul class="service-details">
+                                <li><i class="fas fa-check-circle"></i> Technology roadmapping</li>
+                                <li><i class="fas fa-check-circle"></i> Process optimization</li>
+                            </ul>
+                            <div class="service-stats">
+                                <div class="stat-item"><i class="fas fa-users"></i> 50+ Clients</div>
+                                <div class="stat-item"><i class="fas fa-clock"></i> 1000+ Hours</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card" data-tilt>
+                        <div class="service-icon"><i class="fas fa-code"></i></div>
+                        <div class="service-content">
+                            <h3>Development</h3>
+                            <p>Custom software solutions built for performance and scalability.</p>
+                            <ul class="service-details">
+                                <li><i class="fas fa-check-circle"></i> Web & mobile apps</li>
+                                <li><i class="fas fa-check-circle"></i> API integration</li>
+                            </ul>
+                            <div class="service-stats">
+                                <div class="stat-item"><i class="fas fa-project-diagram"></i> 200+ Projects</div>
+                                <div class="stat-item"><i class="fas fa-star"></i> 98% Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card" data-tilt>
+                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="service-content">
+                            <h3>Security</h3>
+                            <p>Robust security services to safeguard your digital assets.</p>
+                            <ul class="service-details">
+                                <li><i class="fas fa-check-circle"></i> Penetration testing</li>
+                                <li><i class="fas fa-check-circle"></i> Incident response</li>
+                            </ul>
+                            <div class="service-stats">
+                                <div class="stat-item"><i class="fas fa-lock"></i> 99.9% Uptime</div>
+                                <div class="stat-item"><i class="fas fa-bug"></i> 0 Breaches</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-studies" id="case-studies">
+            <div class="container">
+                <h2 class="section-title fade-in">Case Studies</h2>
+                <p class="section-description fade-in">See how we’ve transformed businesses with our solutions.</p>
+                <div class="case-studies-grid">
+                    <div class="case-study-card" data-tilt>
+                        <div class="case-study-header">
+                            <span class="case-study-industry">FinTech</span>
+                            <h3>Digital Banking Platform</h3>
+                        </div>
+                        <div class="case-study-content">
+                            <img src="[ADD YOUR FINTECH IMAGE LINK HERE]" alt="Digital Banking Platform case study" loading="lazy">
+                            <p>Developed a secure, scalable banking platform for a leading financial institution.</p>
+                            <div class="case-study-stats">
+                                <div class="stat-item">50% Cost Reduction</div>
+                                <div class="stat-item">2M+ Users</div>
+                            </div>
+                            <a href="#" class="case-study-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="case-study-card" data-tilt>
+                        <div class="case-study-header">
+                            <span class="case-study-industry">Healthcare</span>
+                            <h3>Telemedicine Solution</h3>
+                        </div>
+                        <div class="case-study-content">
+                            <img src="https://images.pexels.com/photos/7224565/pexels-photo-7224565.jpeg" alt="Telemedicine Solution case study" loading="lazy">
+                            <p>Built a telemedicine platform to improve patient access to care.</p>
+                            <div class="case-study-stats">
+                                <div class="stat-item">80% Engagement</div>
+                                <div class="stat-item">500K+ Patients</div>
+                            </div>
+                            <a href="#" class="case-study-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title fade-in">What Our Clients Say</h2>
+                <p class="section-description fade-in">Hear from businesses transformed by TechTrend Innovations.</p>
+                <div class="testimonial-slider">
+                    <div class="testimonial-item active">
+                        <canvas class="testimonial-chart"></canvas>
+                        <p class="testimonial-text">"TechTrend’s AI analytics revolutionized our decision-making process."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" alt="Client avatar" loading="lazy">
+                            </div>
+                            <div class="author-info">
+                                <h4>Jane Doe</h4>
+                                <p>CEO, FinTech Corp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <canvas class="testimonial-chart"></canvas>
+                        <p class="testimonial-text">"Their cloud solutions scaled our operations seamlessly."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" alt="Client avatar" loading="lazy">
+                            </div>
+                            <div class="author-info">
+                                <h4>John Smith</h4>
+                                <p>CTO, CloudWorks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="prev-btn" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next-btn" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <h2 class="section-title fade-in">Our Impact</h2>
+                <p class="section-description fade-in">Numbers that showcase our success.</p>
+                <div class="stats-grid">
+                    <div class="stat-card" data-tilt>
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <h3>1000+</h3>
+                        <p>Clients Served</p>
+                    </div>
+                    <div class="stat-card" data-tilt>
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3>500+</h3>
+                        <p>Projects Delivered</p>
+                    </div>
+                    <div class="stat-card" data-tilt>
+                        <div class="stat-icon"><i class="fas fa-globe"></i></div>
+                        <h3>50+</h3>
+                        <p>Countries</p>
+                    </div>
+                    <div class="stat-card" data-tilt>
+                        <div class="stat-icon"><i class="fas fa-star"></i></div>
+                        <h3>98%</h3>
+                        <p>Satisfaction Rate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title fade-in">Get in Touch</h2>
+                <p class="section-description fade-in">Let’s discuss how we can transform your business.</p>
+                <div class="contact-container">
+                    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service</label>
+                            <select id="service" name="service" required aria-required="true">
+                                <option value="">Select a service</option>
+                                <option value="AI Analytics">AI Analytics</option>
+                                <option value="Cloud Infrastructure">Cloud Infrastructure</option>
+                                <option value="Cybersecurity">Cybersecurity</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required aria-required="true"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" aria-label="Submit form">Send Message</button>
+                    </form>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contact@techtrendinnovations.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (800) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Tech Street, Silicon Valley, CA</p>
+                            </div>
+                        </div>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h3>TechTrend Innovations</h3>
+                        <p>Empowering the future with innovative technology solutions.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#solutions">Solutions</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Case Studies</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2025 TechTrend Innovations. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
